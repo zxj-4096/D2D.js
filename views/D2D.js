@@ -22,8 +22,18 @@ function HCC() {
     this.text = null;
     //动画用数组来实现
     this.anmi = [];
-    this.HCC = function(type,x,y,w,h,url){
+    this.AddHCC = function(type,x,y,w,h,url){
+        //var h = new HCC();
         HCCList.push(this);
+        this.image = url;
+        this.x = 10;
+        this.y = 20;
+        this.checked = false;
+        this.width = img.width;
+        this.height = img.height;
+        this.draw();
+
+        console.log("add");
     }
     this.draw = function () {
         if (this.image != null) {
